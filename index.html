@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FunSeg: Closed-Loop Vision-Language Functional Segmentation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FunSeg: Closed-Loop Vision-Language Functional Segmentation for Task-Driven 3D Scene Understanding">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Inter:300,400,600,700" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: #222;
+      line-height: 1.6;
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      font-weight: 700;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 60px;
+      font-size: 1.6em;
+      font-weight: 600;
+    }
+    p {
+      font-size: 1.05em;
+    }
+    .authors {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+    .links {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .links a {
+      display: inline-block;
+      margin: 5px 10px;
+      padding: 8px 14px;
+      border-radius: 6px;
+      background: #f2f2f2;
+      text-decoration: none;
+      color: #000;
+      font-weight: 500;
+    }
+    .links a:hover {
+      background: #ddd;
+    }
+    .figure {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .figure img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    code {
+      background: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    footer {
+      margin-top: 80px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- Title -->
+  <h1>FunSeg: Closed-Loop Vision-Language Functional Segmentation<br>for Task-Driven 3D Scenes</h1>
+
+  <!-- Authors -->
+  <div class="authors">
+    Zhang Jingwei<sup>1</sup>, Author2<sup>2</sup>, Author3<sup>1</sup><br>
+    <sup>1</sup>Your Institution &nbsp;&nbsp; <sup>2</sup>Another Institution
+  </div>
+
+  <!-- Links -->
+  <div class="links">
+    <a href="#">📄 Paper (PDF)</a>
+    <a href="#">💻 Code</a>
+    <a href="#">🎥 Video</a>
+    <a href="#">📊 Dataset</a>
+  </div>
+
+  <!-- Abstract -->
+  <h2>Abstract</h2>
+  <p>
+    Interacting with 3D scenes requires precise localization of fine-grained functional
+    elements such as handles and switches. Existing open-vocabulary 3D perception
+    pipelines predominantly operate in an open-loop manner, making them vulnerable
+    to semantic ambiguity and error propagation.
+  </p>
+  <p>
+    We present <strong>FunSeg</strong>, a closed-loop vision-language framework that enables
+    robust task-driven 3D functional segmentation. By introducing
+    <em>Spatial-Sequential Instruction Tuning</em>, we equip vision-language models
+    with fine-grained ordinal and spatial reasoning. Furthermore, a
+    <em>VLM-driven feedback mechanism</em> actively verifies 2D cues before 3D lifting,
+    transforming fragile open-loop inference into a self-verifying process.
+  </p>
+  <p>
+    FunSeg achieves state-of-the-art performance on the SceneFun3D benchmark,
+    demonstrating superior precision and robustness for functional grounding
+    in complex 3D environments.
+  </p>
+
+  <!-- Method -->
+  <h2>Method Overview</h2>
+  <p>
+    FunSeg consists of two key stages: an offline spatial-sequential instruction tuning
+    stage and an online closed-loop inference stage.
+  </p>
+
+  <div class="figure">
+    <img src="figures/fig2.png" alt="FunSeg System Overview">
+    <p><em>Overview of the FunSeg framework. The VLM is trained to reason about fine-grained
+    spatial and ordinal constraints and acts as an active verifier during inference.</em></p>
+  </div>
+
+  <!-- Contributions -->
+  <h2>Key Contributions</h2>
+  <ul>
+    <li>A <strong>closed-loop vision-language framework</strong> for task-driven 3D functional segmentation.</li>
+    <li><strong>Spatial-Sequential Instruction Tuning</strong> to enhance fine-grained ordinal and spatial reasoning.</li>
+    <li>A <strong>VLM-driven feedback mechanism</strong> that actively verifies 2D cues before 3D fusion.</li>
+    <li>State-of-the-art results on <strong>SceneFun3D</strong>, especially for small functional parts.</li>
+  </ul>
+
+  <!-- Results -->
+  <h2>Results</h2>
+  <p>
+    FunSeg significantly outperforms existing open-vocabulary baselines, achieving
+    a <strong>60.9% relative improvement in AP<sub>50</sub></strong> over the previous
+    state-of-the-art on SceneFun3D.
+  </p>
+
+  <div class="figure">
+    <img src="figures/fig7.png" alt="Qualitative Results">
+    <p><em>Qualitative comparison. FunSeg accurately grounds fine-grained functional
+    components under complex spatial and ordinal constraints.</em></p>
+  </div>
+
+  <!-- BibTeX -->
+  <h2>BibTeX</h2>
+  <pre><code>
+@article{funseg2026,
+  title   = {FunSeg: Closed-Loop Vision-Language Functional Segmentation for Task-Driven 3D Scenes},
+  author  = {Zhang, Jingwei and ...},
+  journal = {},
+  year    = {2026}
+}
+  </code></pre>
+
+  <footer>
+    © 2026 FunSeg Project
+  </footer>
+
+</div>
+
+</body>
+</html>
